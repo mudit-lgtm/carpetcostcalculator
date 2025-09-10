@@ -107,8 +107,8 @@ export const CostRangesTable = () => {
     <section className="w-full max-w-6xl mx-auto space-y-12 py-16">
       <div className="text-center space-y-4">
         <h2 className="text-3xl font-bold flex items-center justify-center gap-2">
-          <DollarSign className="h-8 w-8 text-primary" />
-          Carpet Cost Ranges & Pricing Tables
+          <DollarSign className="h-8 w-8 text-green-500" />
+          Average Carpet Installation Cost Calculator by Square Foot
         </h2>
         <p className="text-muted-foreground max-w-3xl mx-auto">
           Comprehensive pricing breakdown for different carpet types, installation complexity, 

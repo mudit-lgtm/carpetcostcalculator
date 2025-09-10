@@ -93,7 +93,7 @@ export const StepByStepGuide = () => {
   return (
     <section className="w-full max-w-6xl mx-auto space-y-12 py-16">
       <div className="text-center space-y-4">
-        <h2 className="text-3xl font-bold">How to Use the Carpet Installation Cost Calculator</h2>
+        <h2 className="text-3xl font-bold">How to Use Our Carpet Cost & Installation Calculator</h2>
         <p className="text-muted-foreground max-w-3xl mx-auto">
           Follow this step-by-step guide to get the most accurate carpet installation estimate. 
           Our calculator considers all factors that affect your final cost.

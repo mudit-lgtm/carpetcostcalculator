@@ -86,7 +86,7 @@ export const RetailerComparison = () => {
   return (
     <section className="w-full max-w-6xl mx-auto space-y-8">
       <div className="text-center space-y-4">
-        <h2 className="text-3xl font-bold">Retailer Pricing Comparison</h2>
+        <h2 className="text-3xl font-bold">Home Depot vs Lowe's Carpet Installation Cost Comparison</h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
           Compare carpet installation costs across major retailers and local contractors
           to find the best value for your project.

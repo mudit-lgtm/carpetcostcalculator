@@ -92,7 +92,7 @@ export const FAQ = () => {
       <div className="text-center space-y-4">
         <div className="flex items-center justify-center gap-2 mb-4">
           <HelpCircle className="h-6 w-6 text-primary" />
-          <h2 className="text-3xl font-bold">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold">Commercial Carpet Installation Cost Calculator - Frequently Asked Questions</h2>
         </div>
         <p className="text-muted-foreground max-w-2xl mx-auto">
           Get answers to common questions about carpet installation costs, 

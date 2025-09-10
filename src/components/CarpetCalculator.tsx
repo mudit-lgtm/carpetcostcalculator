@@ -183,7 +183,7 @@ export const CarpetCalculator = () => {
         <CardHeader className="text-center">
           <div className="flex items-center justify-center gap-2 mb-2">
             <Calculator className="h-6 w-6 text-primary" />
-            <CardTitle className="text-2xl">Carpet Installation Cost Calculator</CardTitle>
+            <CardTitle className="text-2xl">Free Carpet Installation Cost Calculator - Home Depot & Lowe's Pricing</CardTitle>
           </div>
           <CardDescription>
             Get accurate estimates for carpet materials and installation costs

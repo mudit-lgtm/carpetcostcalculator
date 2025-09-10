@@ -45,13 +45,12 @@ export const Introduction = () => {
     <section className="w-full max-w-6xl mx-auto space-y-12 py-16">
       <div className="text-center space-y-6">
         <div className="space-y-4">
-          <h2 className="text-4xl font-bold leading-tight">
-            Professional Carpet Installation Cost Calculator
-          </h2>
+            <h2 className="text-4xl font-bold leading-tight">
+              Free Carpet Installation Cost Calculator for Home Depot, Lowe's & Commercial Projects
+            </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Planning a carpet installation project can be overwhelming with so many variables to consider. 
-            Our free carpet installation cost calculator takes the guesswork out of budgeting by providing 
-            accurate estimates based on your specific needs, room dimensions, carpet type, and local pricing.
+            Get accurate carpet installation cost estimates for Home Depot, Lowe's, and commercial projects. 
+            Compare square foot pricing, average installation costs, and retailer-specific pricing instantly.
           </p>
         </div>
 
@@ -66,7 +65,7 @@ export const Introduction = () => {
           </Button>
           <Badge variant="secondary" className="text-base px-4 py-2">
             <TrendingUp className="h-4 w-4 mr-2" />
-            Updated with 2024 Pricing Data
+            Updated with 2025 Pricing Data
           </Badge>
         </div>
       </div>

@@ -11,9 +11,9 @@ export const Header = () => {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Hammer className="h-6 w-6 text-orange-500" />
-          <h1 className="text-xl font-bold text-primary">
+          <div className="text-xl font-bold text-primary">
             Carpet Cost Calculator
-          </h1>
+          </div>
         </div>
 
         {/* Desktop Navigation */}

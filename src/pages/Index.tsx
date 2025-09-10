@@ -20,49 +20,49 @@ const Index = () => {
       <main>
         <Hero />
         
-        <section id="calculator" className="py-8 px-4">
+        <section id="calculator" className="py-6 px-4">
           <div className="container mx-auto">
             <CarpetCalculator />
           </div>
         </section>
         
-        <section className="py-8 px-4">
+        <section className="py-6 px-4">
           <div className="container mx-auto">
             <Introduction />
           </div>
         </section>
-
-        <section className="py-8 px-4 bg-secondary/20">
+        
+        <section className="py-6 px-4 bg-secondary/20">
           <div className="container mx-auto">
             <StepByStepGuide />
           </div>
         </section>
 
-        <section className="py-8 px-4">
+        <section className="py-6 px-4">
           <div className="container mx-auto">
             <CostRangesTable />
           </div>
         </section>
 
-        <section className="py-8 px-4 bg-secondary/20">
+        <section className="py-6 px-4 bg-secondary/20">
           <div className="container mx-auto">
             <ConversionTables />
           </div>
         </section>
 
-        <section id="guide" className="py-8 px-4">
+        <section id="guide" className="py-6 px-4">
           <div className="container mx-auto">
             <CarpetTypeGuide />
           </div>
         </section>
 
-        <section id="retailers" className="py-8 px-4 bg-secondary/20">
+        <section id="retailers" className="py-6 px-4 bg-secondary/20">
           <div className="container mx-auto">
             <RetailerComparison />
           </div>
         </section>
 
-        <section className="py-8 px-4">
+        <section className="py-6 px-4">
           <div className="container mx-auto">
             <BrandSpecificNotes />
           </div>

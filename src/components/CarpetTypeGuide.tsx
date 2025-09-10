@@ -64,7 +64,7 @@ export const CarpetTypeGuide = () => {
   return (
     <section className="w-full max-w-6xl mx-auto space-y-8">
       <div className="text-center space-y-4">
-        <h2 className="text-3xl font-bold">Carpet Types & Pricing Guide</h2>
+        <h2 className="text-3xl font-bold">Square Foot Carpet Installation Cost Calculator - Complete Guide</h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
           Choose the right carpet type for your space. Each type has different characteristics
           and pricing to match your needs and budget.
