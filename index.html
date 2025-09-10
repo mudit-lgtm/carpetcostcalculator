@@ -25,9 +25,9 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebApplication",
+      "@type": ["WebApplication", "HowTo"],
       "name": "Carpet Installation Cost Calculator",
-      "description": "Professional carpet installation cost calculator for residential and commercial projects",
+      "description": "Professional carpet installation cost calculator for residential and commercial projects with step-by-step guides and pricing comparisons",
       "applicationCategory": "FinanceApplication",
       "operatingSystem": "Any",
       "offers": {
@@ -36,11 +36,56 @@
         "priceCurrency": "USD"
       },
       "featureList": [
-        "Square footage calculator",
-        "Material cost estimation",
-        "Labor cost calculation",
-        "Retailer-specific pricing",
-        "Commercial carpet estimates"
+        "Square footage calculator with waste factor",
+        "Material cost estimation for all carpet types",
+        "Labor cost calculation by region",
+        "Retailer-specific pricing (Home Depot, Lowe's, Costco)",
+        "Commercial carpet estimates",
+        "DIY vs professional cost comparison",
+        "Stair installation calculator",
+        "Additional services calculator"
+      ],
+      "stepByStep": [
+        "Enter room dimensions (length × width)",
+        "Choose carpet type (nylon, wool, polyester, berber)",
+        "Select padding/underlay options",
+        "Add extras (stairs, removal, furniture moving)",
+        "Choose labor region for accurate pricing",
+        "Get instant detailed cost breakdown"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does carpet installation cost per square foot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Total carpet installation costs range from $3.50-$9.00 per square foot including materials and labor. Budget options start at $3.50/sq ft, mid-range nylon costs $5.50-$7.00/sq ft, and premium materials range from $7.00-$9.00/sq ft."
+          }
+        },
+        {
+          "@type": "Question", 
+          "name": "Is Lowe's or Home Depot cheaper for carpet installation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lowe's is typically 5-10% less expensive than Home Depot on average, with better installation consistency. However, both run frequent sales that can change pricing dynamics."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate carpet installation cost?",
+          "acceptedAnswer": {
+            "@type": "Answer", 
+            "text": "Calculate room square footage (length × width), add 10% for waste, multiply by carpet price per sq ft, add padding cost ($0.50-1.50/sq ft), add installation labor ($1.50-3.50/sq ft), and include any additional services."
+          }
+        }
       ]
     }
     </script>
