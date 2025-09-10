@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Calculator, TrendingUp } from "lucide-react";
+import { ArrowDown, Calculator, TrendingUp, Sparkles, Users, Timer } from "lucide-react";
 
 export const Hero = () => {
   const scrollToCalculator = () => {
@@ -28,26 +28,29 @@ export const Hero = () => {
               size="lg"
               className="bg-primary hover:bg-primary-dark text-lg px-8 py-6 transition-smooth"
             >
-              <Calculator className="h-5 w-5 mr-2" />
+              <Calculator className="h-5 w-5 mr-2 text-white" />
               Calculate Costs Now
             </Button>
             
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <TrendingUp className="h-4 w-4 text-success" />
+              <Sparkles className="h-4 w-4 text-yellow-500" />
               <span>Free • Instant Results • No Signup Required</span>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 pt-8 border-t border-border/50">
             <div className="text-center">
+              <Users className="h-6 w-6 text-blue-500 mx-auto mb-2" />
               <div className="text-2xl font-bold text-primary">50K+</div>
               <div className="text-sm text-muted-foreground">Calculations Completed</div>
             </div>
             <div className="text-center">
+              <TrendingUp className="h-6 w-6 text-green-500 mx-auto mb-2" />
               <div className="text-2xl font-bold text-primary">$2.50-$6.50</div>
               <div className="text-sm text-muted-foreground">Average Cost per Sq Ft</div>
             </div>
             <div className="text-center">
+              <Timer className="h-6 w-6 text-purple-500 mx-auto mb-2" />
               <div className="text-2xl font-bold text-primary">4 Major</div>
               <div className="text-sm text-muted-foreground">Retailer Price Comparisons</div>
             </div>

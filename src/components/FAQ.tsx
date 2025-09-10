@@ -22,7 +22,7 @@ const faqs = [
     answer: "Lowe's is typically 5-10% less expensive than Home Depot on average, with better installation consistency through their certified installer network. However, both retailers frequently run sales that can change this dynamic. Home Depot offers more DIY-friendly options, while Lowe's focuses on professional installation quality."
   },
   {
-    question: "How much does carpet installation cost per square foot in 2024?",
+    question: "How much does carpet installation cost per square foot in 2025?",
     answer: "Total carpet installation costs range from $3.50-$9.00 per square foot including materials and labor. Budget options (polyester) start at $3.50/sq ft, mid-range nylon carpets cost $5.50-$7.00/sq ft, and premium materials (wool, high-end nylon) range from $7.00-$9.00/sq ft. Installation alone costs $1.50-$3.50 per square foot."
   },
   {

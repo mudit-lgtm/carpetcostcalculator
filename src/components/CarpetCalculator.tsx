@@ -134,6 +134,45 @@ export const CarpetCalculator = () => {
     });
   };
 
+  const downloadPDF = async () => {
+    const { jsPDF } = await import('jspdf');
+    
+    if (!result) return;
+
+    const pdf = new jsPDF();
+    
+    // Add header
+    pdf.setFontSize(20);
+    pdf.text('Carpet Installation Cost Estimate', 20, 30);
+    
+    // Add calculation details
+    pdf.setFontSize(12);
+    const details = [
+      `Date: ${new Date().toLocaleDateString()}`,
+      `Room Size: ${length}' x ${width}' (${result.squareFootage} sq ft)`,
+      `Carpet Type: ${carpetTypes[carpetType as keyof typeof carpetTypes]?.name || carpetType}`,
+      `Project Type: ${projectType}`,
+      `Region: ${region}`,
+      ``,
+      `Cost Breakdown:`,
+      `Carpet Material: $${result.carpetCost.toFixed(2)}`,
+      `Installation Labor: $${result.installationCost.toFixed(2)}`,
+      `Padding: $${result.paddingCost.toFixed(2)}`,
+      result.stairsCost > 0 ? `Stairs: $${result.stairsCost.toFixed(2)}` : '',
+      result.removalCost > 0 ? `Old Carpet Removal: $${result.removalCost.toFixed(2)}` : '',
+      result.furnitureMovingCost > 0 ? `Furniture Moving: $${result.furnitureMovingCost.toFixed(2)}` : '',
+      ``,
+      `Total Cost: $${result.totalCost.toFixed(2)}`,
+      `Price per Sq Ft: $${result.pricePerSqFt.toFixed(2)}`
+    ].filter(line => line !== '');
+
+    details.forEach((line, index) => {
+      pdf.text(line, 20, 50 + (index * 7));
+    });
+
+    pdf.save('carpet-installation-estimate-2025.pdf');
+  };
+
   const printEstimate = () => {
     window.print();
   };
@@ -380,9 +419,9 @@ export const CarpetCalculator = () => {
                   <DollarSign className="h-5 w-5" />
                   Cost Estimate Results
                 </CardTitle>
-                <Button onClick={printEstimate} variant="outline" size="sm">
-                  <Download className="h-4 w-4 mr-2" />
-                  Print/Save
+                <Button onClick={downloadPDF} variant="outline" size="sm">
+                  <Download className="h-4 w-4 mr-2 text-blue-500" />
+                  Download PDF
                 </Button>
               </div>
             </CardHeader>
