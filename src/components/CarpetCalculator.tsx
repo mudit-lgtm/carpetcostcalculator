@@ -183,10 +183,10 @@ export const CarpetCalculator = () => {
         <CardHeader className="text-center">
           <div className="flex items-center justify-center gap-2 mb-2">
             <Calculator className="h-6 w-6 text-primary" />
-            <CardTitle className="text-2xl">Free Carpet Installation Cost Calculator - Home Depot & Lowe's Pricing</CardTitle>
+            <CardTitle className="text-2xl">Free Carpet Installation Cost Estimator 2025 - Calculate Labor & Material Costs</CardTitle>
           </div>
           <CardDescription>
-            Get accurate estimates for carpet materials and installation costs
+            Calculate carpet installation costs per square foot for Home Depot, Lowe's, and commercial projects. Get instant estimates for labor costs, stair carpeting, and total replacement costs.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-6">
@@ -432,24 +432,36 @@ export const CarpetCalculator = () => {
                     {result.squareFootage.toFixed(0)}
                   </div>
                   <div className="text-sm text-muted-foreground">Square Feet</div>
+                  <div className="text-xs text-muted-foreground mt-1">
+                    ({(result.squareFootage / 9).toFixed(1)} sq yards)
+                  </div>
                 </div>
                 <div className="text-center p-4 bg-background rounded-lg border">
                   <div className="text-2xl font-bold text-primary">
                     ${result.carpetCost.toFixed(0)}
                   </div>
-                  <div className="text-sm text-muted-foreground">Carpet Cost</div>
+                  <div className="text-sm text-muted-foreground">Carpet Material</div>
+                  <div className="text-xs text-muted-foreground mt-1">
+                    ${(result.carpetCost / result.squareFootage).toFixed(2)}/sq ft
+                  </div>
                 </div>
                 <div className="text-center p-4 bg-background rounded-lg border">
                   <div className="text-2xl font-bold text-primary">
                     ${result.paddingCost.toFixed(0)}
                   </div>
                   <div className="text-sm text-muted-foreground">Padding Cost</div>
+                  <div className="text-xs text-muted-foreground mt-1">
+                    ${(result.paddingCost / result.squareFootage).toFixed(2)}/sq ft
+                  </div>
                 </div>
                 <div className="text-center p-4 bg-background rounded-lg border">
                   <div className="text-2xl font-bold text-primary">
                     ${result.installationCost.toFixed(0)}
                   </div>
-                  <div className="text-sm text-muted-foreground">Installation</div>
+                  <div className="text-sm text-muted-foreground">Labor Cost</div>
+                  <div className="text-xs text-muted-foreground mt-1">
+                    ${(result.installationCost / result.squareFootage).toFixed(2)}/sq ft
+                  </div>
                 </div>
               </div>
 
