@@ -40,7 +40,30 @@ export const CarpetCalculator = () => {
   const [includeRemoval, setIncludeRemoval] = useState<boolean>(false);
   const [includeFurnitureMoving, setIncludeFurnitureMoving] = useState<boolean>(false);
   const [showDIYComparison, setShowDIYComparison] = useState<boolean>(false);
+  const [installationType, setInstallationType] = useState<string>('stretch-in');
+  const [isBasement, setIsBasement] = useState<boolean>(false);
   const [result, setResult] = useState<CalculationResult | null>(null);
+
+  const quickPresets = [
+    { name: '12x12', length: 12, width: 12, sqft: 144 },
+    { name: '12x15', length: 12, width: 15, sqft: 180 },
+    { name: '15x20', length: 15, width: 20, sqft: 300 },
+    { name: '20x20', length: 20, width: 20, sqft: 400 },
+    { name: '500 sq ft', length: 0, width: 0, sqft: 500 },
+    { name: '1000 sq ft', length: 0, width: 0, sqft: 1000 },
+  ];
+
+  const applyPreset = (preset: typeof quickPresets[0]) => {
+    if (preset.length > 0) {
+      setLength(preset.length.toString());
+      setWidth(preset.width.toString());
+    } else {
+      // For square footage presets, calculate approximate square room
+      const side = Math.sqrt(preset.sqft);
+      setLength(side.toFixed(1));
+      setWidth(side.toFixed(1));
+    }
+  };
 
   const carpetTypes = {
     polyester: { name: 'Polyester', price: 3.25, installation: 2.00, durability: 'Good' },
@@ -90,11 +113,13 @@ export const CarpetCalculator = () => {
     const regionData = regionalMultipliers[region as keyof typeof regionalMultipliers];
     
     const commercialMultiplier = projectType === 'commercial' ? 1.25 : 1.0;
+    const glueDownMultiplier = installationType === 'glue-down' ? 1.25 : 1.0;
+    const basementMultiplier = isBasement ? 1.15 : 1.0; // Moisture barrier padding + prep
     
     // Calculate costs
     const carpetCost = squareFootage * carpet.price * retailerData.multiplier;
-    const paddingCost = squareFootage * padding.price * retailerData.multiplier;
-    const installationCost = squareFootage * carpet.installation * commercialMultiplier * retailerData.multiplier * regionData.multiplier;
+    const paddingCost = squareFootage * padding.price * retailerData.multiplier * basementMultiplier;
+    const installationCost = squareFootage * carpet.installation * commercialMultiplier * glueDownMultiplier * basementMultiplier * retailerData.multiplier * regionData.multiplier;
     
     // Additional services
     const stairsCost = parseInt(stairs) * 20 * retailerData.multiplier;
@@ -190,6 +215,26 @@ export const CarpetCalculator = () => {
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-6">
+          {/* Quick Presets */}
+          <div className="space-y-2">
+            <Label>Quick Room Size Presets</Label>
+            <div className="grid grid-cols-3 md:grid-cols-6 gap-2">
+              {quickPresets.map((preset) => (
+                <Button
+                  key={preset.name}
+                  variant="outline"
+                  size="sm"
+                  onClick={() => applyPreset(preset)}
+                  className="text-xs"
+                >
+                  {preset.name}
+                </Button>
+              ))}
+            </div>
+          </div>
+
+          <Separator />
+
           {/* Room Dimensions */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
@@ -331,14 +376,51 @@ export const CarpetCalculator = () => {
 
           <Separator />
 
+          {/* Installation Type */}
+          <div className="space-y-2">
+            <Label htmlFor="installation-type">Installation Method</Label>
+            <Select value={installationType} onValueChange={setInstallationType}>
+              <SelectTrigger>
+                <SelectValue placeholder="Select installation type" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="stretch-in">
+                  <div className="flex justify-between items-center w-full">
+                    <span>Stretch-In (Standard)</span>
+                    <Badge variant="outline" className="ml-2">Standard</Badge>
+                  </div>
+                </SelectItem>
+                <SelectItem value="glue-down">
+                  <div className="flex justify-between items-center w-full">
+                    <span>Glue Down</span>
+                    <Badge variant="outline" className="ml-2">+25% labor</Badge>
+                  </div>
+                </SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
           {/* Extra Services */}
           <div className="space-y-4">
             <Label className="text-lg font-semibold flex items-center gap-2">
               <Settings className="h-5 w-5" />
-              Additional Services
+              Additional Services & Options
             </Label>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="flex items-center space-x-2">
+                <input
+                  type="checkbox"
+                  id="basement"
+                  checked={isBasement}
+                  onChange={(e) => setIsBasement(e.target.checked)}
+                  className="rounded"
+                />
+                <label htmlFor="basement" className="text-sm font-medium">
+                  Basement installation (+15% moisture protection)
+                </label>
+              </div>
+
               <div className="flex items-center space-x-2">
                 <input
                   type="checkbox"
