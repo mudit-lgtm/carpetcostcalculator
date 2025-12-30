@@ -1,10 +1,11 @@
-import { Home, Calculator, BookOpen, Building2, HelpCircle } from "lucide-react";
+import { Home, Calculator, BookOpen, Building2, HelpCircle, ArrowUpDown, Layers, Grid3X3 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
     <footer className="border-t bg-secondary/10 py-8 px-4">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-6">
           {/* Logo and Description */}
           <div>
             <div className="flex items-center gap-2 mb-3">
@@ -30,20 +31,37 @@ export const Footer = () => {
                 <Calculator className="h-4 w-4 text-green-500" />
                 Calculator
               </a>
+              <Link to="/stair-carpet-calculator" className="text-sm text-muted-foreground hover:text-primary transition-smooth flex items-center gap-2">
+                <ArrowUpDown className="h-4 w-4 text-amber-500" />
+                Stair Calculator
+              </Link>
               <a href="#guide" className="text-sm text-muted-foreground hover:text-primary transition-smooth flex items-center gap-2">
                 <BookOpen className="h-4 w-4 text-purple-500" />
                 Carpet Guide
               </a>
-              <a href="#retailers" className="text-sm text-muted-foreground hover:text-primary transition-smooth flex items-center gap-2">
-                <Building2 className="h-4 w-4 text-orange-500" />
-                Retailer Pricing
+            </nav>
+          </div>
+
+          {/* Tools */}
+          <div>
+            <h4 className="font-semibold mb-3">Tools</h4>
+            <nav className="flex flex-col space-y-2">
+              <a href="#multi-room" className="text-sm text-muted-foreground hover:text-primary transition-smooth">
+                Multi-Room Calculator
               </a>
-              <a href="#faq" className="text-sm text-muted-foreground hover:text-primary transition-smooth flex items-center gap-2">
-                <HelpCircle className="h-4 w-4 text-red-500" />
-                FAQ
+              <a href="#comparison-tool" className="text-sm text-muted-foreground hover:text-primary transition-smooth">
+                Price Comparison
               </a>
-              <a href="#about" className="text-sm text-muted-foreground hover:text-primary transition-smooth">
-                About Us
+              <a href="#tile-calculator" className="text-sm text-muted-foreground hover:text-primary transition-smooth flex items-center gap-2">
+                <Grid3X3 className="h-4 w-4 text-teal-500" />
+                Tile Calculator
+              </a>
+              <a href="#floor-comparison" className="text-sm text-muted-foreground hover:text-primary transition-smooth flex items-center gap-2">
+                <Layers className="h-4 w-4 text-cyan-500" />
+                Floor Comparison
+              </a>
+              <a href="#maintenance-calculator" className="text-sm text-muted-foreground hover:text-primary transition-smooth">
+                Maintenance Costs
               </a>
             </nav>
           </div>
@@ -57,6 +75,7 @@ export const Footer = () => {
               <li>✓ DIY vs professional comparison</li>
               <li>✓ Multiple retailer prices</li>
               <li>✓ Instant PDF reports</li>
+              <li>✓ 2026 pricing data</li>
             </ul>
           </div>
         </div>
