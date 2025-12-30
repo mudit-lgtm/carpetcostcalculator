@@ -39,7 +39,7 @@ export const QuickCostReference = () => {
       <div className="text-center space-y-4">
         <h2 className="text-3xl font-bold flex items-center justify-center gap-2">
           <DollarSign className="h-8 w-8 text-primary" />
-          Quick Carpet Cost Reference 2025
+          Quick Carpet Cost Reference 2026
         </h2>
         <p className="text-muted-foreground max-w-3xl mx-auto">
           Instant carpet installation cost estimates for common room sizes. Use our free carpet cost calculator above for detailed personalized estimates.
@@ -120,9 +120,9 @@ export const QuickCostReference = () => {
         {/* Retailer Comparison */}
         <Card className="calculator-card">
           <CardHeader>
-            <CardTitle className="text-xl flex items-center gap-2">
-              <Store className="h-5 w-5 text-primary" />
-              Retailer Installation Prices 2025
+          <CardTitle className="text-xl flex items-center gap-2">
+            <Store className="h-5 w-5 text-primary" />
+            Retailer Installation Prices 2026
             </CardTitle>
           </CardHeader>
           <CardContent>

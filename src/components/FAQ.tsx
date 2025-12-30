@@ -11,16 +11,16 @@ import { HelpCircle, CheckCircle } from "lucide-react";
 const faqs = [
   // High-impression keywords from Search Console
   {
-    question: "How much does carpet installation cost per square foot in 2025?",
+    question: "How much does carpet installation cost per square foot in 2026?",
     answer: "Carpet installation cost per square foot ranges from $3.50-$9.00 total (materials + labor). Installation labor alone costs $1.50-$3.50 per sq ft. Budget polyester carpet runs $3.50-$4.50/sq ft, mid-range nylon costs $5.50-$7.00/sq ft, and premium wool or high-end nylon ranges from $7.00-$9.00/sq ft. Regional labor rates significantly impact the final carpet installation prices."
   },
   {
-    question: "How much does Lowe's charge for carpet installation per square foot 2025?",
-    answer: "Lowe's carpet installation cost per square foot 2025 averages $1.50-$3.00 for labor only. Total costs including materials range from $3.50-$8.00/sq ft. Lowe's carpet installation prices are typically 5-10% lower than Home Depot. Use the Lowe's carpet calculator for accurate estimates. They offer free in-home estimates and frequently run promotions with consistent quality through their certified installer network."
+    question: "How much does Lowe's charge for carpet installation per square foot 2026?",
+    answer: "Lowe's carpet installation cost per square foot 2026 averages $1.50-$3.00 for labor only. Total costs including materials range from $3.50-$8.00/sq ft. Lowe's carpet installation prices are typically 5-10% lower than Home Depot. Use the Lowe's carpet calculator for accurate estimates. They offer free in-home estimates and frequently run promotions with consistent quality through their certified installer network."
   },
   {
-    question: "What is Home Depot carpet installation cost per square foot 2025?",
-    answer: "Home Depot carpet installation cost per square foot 2025 ranges from $1.75-$3.50 for labor. Total installed cost including materials runs $4.00-$9.00/sq ft. Their Home Depot carpet calculator provides instant estimates. They offer competitive pricing with frequent sales, starting at $0.49 per sq ft for select carpets during promotions, plus free estimates and professional installation with warranty coverage."
+    question: "What is Home Depot carpet installation cost per square foot 2026?",
+    answer: "Home Depot carpet installation cost per square foot 2026 ranges from $1.75-$3.50 for labor. Total installed cost including materials runs $4.00-$9.00/sq ft. Their Home Depot carpet calculator provides instant estimates. They offer competitive pricing with frequent sales, starting at $0.49 per sq ft for select carpets during promotions, plus free estimates and professional installation with warranty coverage."
   },
   {
     question: "How much does carpet replacement cost per square foot?",
@@ -268,25 +268,13 @@ export const FAQ = () => {
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-left hover:text-primary transition-smooth">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed">
+                <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
-        </CardContent>
-      </Card>
-
-      <Card className="calculator-card">
-        <CardContent className="pt-6 text-center">
-          <h3 className="text-lg font-semibold mb-2">Still have questions about carpet installation costs?</h3>
-          <p className="text-muted-foreground">
-            For specific carpet installation prices in your area, we recommend getting free carpet estimates from 2-3 local installers 
-            in addition to Lowe's, Home Depot, and Costco. This ensures you get the best value for your carpet installation project.
-          </p>
         </CardContent>
       </Card>
     </section>
