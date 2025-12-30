@@ -62,7 +62,7 @@ export const Footer = () => {
         </div>
 
         <div className="border-t pt-6 text-center text-sm text-muted-foreground">
-          <p>&copy; 2025 Carpet Installation Cost Calculator. Free tool for estimating flooring costs.</p>
+          <p>&copy; 2026 Carpet Installation Cost Calculator. Free tool for estimating flooring costs.</p>
         </div>
       </div>
     </footer>
