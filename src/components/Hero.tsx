@@ -33,24 +33,24 @@ export const Hero = () => {
             </Button>
             
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Sparkles className="h-4 w-4 text-yellow-500" />
+              <Sparkles className="h-4 w-4 text-primary" />
               <span>Free • Instant Results • No Signup Required</span>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 pt-8 border-t border-border/50">
             <div className="text-center">
-              <Users className="h-6 w-6 text-blue-500 mx-auto mb-2" />
+              <Users className="h-6 w-6 text-primary/80 mx-auto mb-2" />
               <div className="text-2xl font-bold text-primary">50K+</div>
               <div className="text-sm text-muted-foreground">Calculations Completed</div>
             </div>
             <div className="text-center">
-              <TrendingUp className="h-6 w-6 text-green-500 mx-auto mb-2" />
+              <TrendingUp className="h-6 w-6 text-success mx-auto mb-2" />
               <div className="text-2xl font-bold text-primary">$2.50-$6.50</div>
               <div className="text-sm text-muted-foreground">Average Cost per Sq Ft</div>
             </div>
             <div className="text-center">
-              <Timer className="h-6 w-6 text-purple-500 mx-auto mb-2" />
+              <Timer className="h-6 w-6 text-primary/70 mx-auto mb-2" />
               <div className="text-2xl font-bold text-primary">4 Major</div>
               <div className="text-sm text-muted-foreground">Retailer Price Comparisons</div>
             </div>

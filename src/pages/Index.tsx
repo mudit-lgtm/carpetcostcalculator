@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { Introduction } from "@/components/Introduction";
 import { CarpetCalculator } from "@/components/CarpetCalculator";
 import { MultiRoomCalculator } from "@/components/MultiRoomCalculator";
+import { StairCalculatorSection } from "@/components/StairCalculatorSection";
 import { StepByStepGuide } from "@/components/StepByStepGuide";
 import { CostRangesTable } from "@/components/CostRangesTable";
 import { QuickCostReference } from "@/components/QuickCostReference";
@@ -17,6 +18,7 @@ import { BrandSpecificNotes } from "@/components/BrandSpecificNotes";
 import { FAQ } from "@/components/FAQ";
 import { AboutUs } from "@/components/AboutUs";
 import { Footer } from "@/components/Footer";
+import { BackToTop } from "@/components/BackToTop";
 
 const Index = () => {
   return (
@@ -32,11 +34,13 @@ const Index = () => {
           </div>
         </section>
 
-        <section className="py-6 px-4 bg-secondary/20">
+        <section id="multi-room" className="py-6 px-4 bg-secondary/20">
           <div className="container mx-auto">
             <MultiRoomCalculator />
           </div>
         </section>
+
+        <StairCalculatorSection />
         
         <section className="py-6 px-4">
           <div className="container mx-auto">
@@ -50,7 +54,7 @@ const Index = () => {
           </div>
         </section>
 
-        <section className="py-6 px-4">
+        <section id="comparison-tool" className="py-6 px-4">
           <div className="container mx-auto">
             <CarpetComparisonTool />
           </div>
@@ -62,7 +66,7 @@ const Index = () => {
           </div>
         </section>
 
-        <section className="py-6 px-4">
+        <section id="tile-calculator" className="py-6 px-4">
           <div className="container mx-auto">
             <CarpetTileCalculator />
           </div>
@@ -74,13 +78,13 @@ const Index = () => {
           </div>
         </section>
 
-        <section className="py-6 px-4">
+        <section id="maintenance-calculator" className="py-6 px-4">
           <div className="container mx-auto">
             <CarpetMaintenanceCalculator />
           </div>
         </section>
 
-        <section className="py-6 px-4 bg-secondary/20">
+        <section id="floor-comparison" className="py-6 px-4 bg-secondary/20">
           <div className="container mx-auto">
             <FloorComparisonTool />
           </div>
@@ -116,6 +120,7 @@ const Index = () => {
       </main>
 
       <Footer />
+      <BackToTop />
     </div>
   );
 };

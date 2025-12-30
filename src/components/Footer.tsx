@@ -1,5 +1,4 @@
 import { Home, Calculator, BookOpen, Building2, HelpCircle, ArrowUpDown, Layers, Grid3X3 } from "lucide-react";
-import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -24,19 +23,19 @@ export const Footer = () => {
             <h4 className="font-semibold mb-3">Navigation</h4>
             <nav className="flex flex-col space-y-2">
               <a href="/" className="text-sm text-muted-foreground hover:text-primary transition-smooth flex items-center gap-2">
-                <Home className="h-4 w-4 text-blue-500" />
+                <Home className="h-4 w-4 text-primary/70" />
                 Home
               </a>
               <a href="#calculator" className="text-sm text-muted-foreground hover:text-primary transition-smooth flex items-center gap-2">
-                <Calculator className="h-4 w-4 text-green-500" />
+                <Calculator className="h-4 w-4 text-primary/80" />
                 Calculator
               </a>
-              <Link to="/stair-carpet-calculator" className="text-sm text-muted-foreground hover:text-primary transition-smooth flex items-center gap-2">
-                <ArrowUpDown className="h-4 w-4 text-amber-500" />
+              <a href="#stair-carpet-calculator" className="text-sm text-muted-foreground hover:text-primary transition-smooth flex items-center gap-2">
+                <ArrowUpDown className="h-4 w-4 text-primary/70" />
                 Stair Calculator
-              </Link>
+              </a>
               <a href="#guide" className="text-sm text-muted-foreground hover:text-primary transition-smooth flex items-center gap-2">
-                <BookOpen className="h-4 w-4 text-purple-500" />
+                <BookOpen className="h-4 w-4 text-primary/60" />
                 Carpet Guide
               </a>
             </nav>
@@ -53,11 +52,11 @@ export const Footer = () => {
                 Price Comparison
               </a>
               <a href="#tile-calculator" className="text-sm text-muted-foreground hover:text-primary transition-smooth flex items-center gap-2">
-                <Grid3X3 className="h-4 w-4 text-teal-500" />
+                <Grid3X3 className="h-4 w-4 text-primary/70" />
                 Tile Calculator
               </a>
               <a href="#floor-comparison" className="text-sm text-muted-foreground hover:text-primary transition-smooth flex items-center gap-2">
-                <Layers className="h-4 w-4 text-cyan-500" />
+                <Layers className="h-4 w-4 text-primary/60" />
                 Floor Comparison
               </a>
               <a href="#maintenance-calculator" className="text-sm text-muted-foreground hover:text-primary transition-smooth">
