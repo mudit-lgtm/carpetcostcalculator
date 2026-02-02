@@ -108,13 +108,13 @@ export const CarpetComparisonTool = () => {
 
   return (
     <section id="comparison-tool" className="w-full max-w-6xl mx-auto space-y-6">
-      <div className="text-center space-y-4">
+<div className="text-center space-y-4">
         <h2 className="text-3xl font-bold flex items-center justify-center gap-2">
           <Store className="h-8 w-8 text-primary" />
-          Carpet Price Comparison Tool 2026
+          Carpet Quote Comparison - Home Depot vs Lowe's Prices 2026
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          Compare carpet installation prices from Lowe's, Home Depot, Costco, and local contractors side-by-side.
+          Get carpet quotes and compare carpet installation prices from <a href="https://www.lowes.com/l/floors/carpet" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Lowe's</a>, <a href="https://www.homedepot.com/b/Flooring-Carpet/N-5yc1vZaq7m" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Home Depot</a>, <a href="https://www.costco.com/carpet-flooring.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Costco</a>, and local contractors. Find the best carpet estimate for your project.
         </p>
       </div>
 

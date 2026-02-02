@@ -134,14 +134,15 @@ export const StairCalculatorSection = () => {
   return (
     <section id="stair-carpet-calculator" className="py-12 px-4 bg-secondary/5">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-8">
+<div className="text-center mb-8">
           <div className="flex items-center justify-center gap-2 mb-4">
             <ArrowUpDown className="h-8 w-8 text-primary" />
-            <h2 className="text-3xl font-bold">Stair Carpet Calculator</h2>
+            <h2 className="text-3xl font-bold">Stair Carpet Calculator - Calculate Carpet for Stairs</h2>
           </div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Calculate the cost to carpet your stairs including straight, curved, spiral, and L-shaped configurations. 
-            Get accurate estimates for materials, labor, and installation.
+            How much does it cost to carpet stairs? Calculate stair carpet installation cost for straight, curved, spiral, and L-shaped configurations. 
+            Get accurate estimates for <a href="https://www.lowes.com/l/floors/carpet" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Lowe's</a> and <a href="https://www.homedepot.com/b/Flooring-Carpet/N-5yc1vZaq7m" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Home Depot</a> stair carpeting. 
+            Need a room estimate? Try our <a href="#calculator" className="text-primary hover:underline">carpet cost calculator</a>.
           </p>
         </div>
 

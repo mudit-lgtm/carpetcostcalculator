@@ -120,13 +120,13 @@ export const MultiRoomCalculator = () => {
   return (
     <section id="multi-room" className="w-full max-w-4xl mx-auto space-y-6">
       <Card className="calculator-card">
-        <CardHeader className="text-center">
+<CardHeader className="text-center">
           <div className="flex items-center justify-center gap-2 mb-2">
             <Home className="h-6 w-6 text-primary" />
-            <CardTitle className="text-2xl">Multi-Room Carpet Calculator - Whole House Estimate</CardTitle>
+            <CardTitle className="text-2xl">Multi-Room Carpet Calculator - How Much Carpet Do I Need?</CardTitle>
           </div>
           <CardDescription>
-            Calculate carpet installation costs for multiple rooms at once. Get a combined total for whole-house carpeting projects.
+            Calculate how much carpet you need for multiple rooms. Get a whole-house carpet estimate with combined totals. Perfect for answering "how much carpet do I need for my house?" Also try our <a href="#calculator" className="text-primary hover:underline">single room carpet calculator</a> or <a href="#stair-carpet-calculator" className="text-primary hover:underline">stair carpet calculator</a>.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-6">
