@@ -205,13 +205,13 @@ export const CarpetCalculator = () => {
   return (
     <div className="w-full max-w-4xl mx-auto space-y-8">
       <Card className="calculator-card">
-        <CardHeader className="text-center">
+<CardHeader className="text-center">
           <div className="flex items-center justify-center gap-2 mb-2">
             <Calculator className="h-6 w-6 text-primary" />
-            <CardTitle className="text-2xl">Free Carpet Installation Cost Estimator 2026 - Calculate Labor & Material Costs</CardTitle>
+            <CardTitle className="text-2xl">Carpet Calculator: Get Your Free Carpet Estimate</CardTitle>
           </div>
           <CardDescription>
-            Calculate carpet installation costs per square foot for Home Depot, Lowe's, and commercial projects. Get instant estimates for labor costs, stair carpeting, and total replacement costs.
+            Free carpet cost estimator for <a href="https://www.lowes.com/l/floors/carpet" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Lowe's</a>, <a href="https://www.homedepot.com/b/Flooring-Carpet/N-5yc1vZaq7m" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Home Depot</a>, and <a href="https://www.costco.com/carpet-flooring.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Costco</a>. Calculate carpet installation cost per square foot including labor, padding, and materials. Need stairs? Try our <a href="#stair-carpet-calculator" className="text-primary hover:underline">stair carpet calculator</a>.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-6">
