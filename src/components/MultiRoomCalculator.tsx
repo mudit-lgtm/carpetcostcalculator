@@ -123,10 +123,22 @@ export const MultiRoomCalculator = () => {
 <CardHeader className="text-center">
           <div className="flex items-center justify-center gap-2 mb-2">
             <Home className="h-6 w-6 text-primary" />
-            <CardTitle className="text-2xl">Multi-Room Carpet Calculator - How Much Carpet Do I Need?</CardTitle>
+            <CardTitle className="text-2xl">Multi-Room Carpet Calculator</CardTitle>
           </div>
+          <h3 className="text-lg text-muted-foreground mb-2">How Much Carpet Do I Need for My House?</h3>
+          
+          {/* Quick whole-house cost reference */}
+          <div className="flex flex-wrap justify-center gap-2 mb-3">
+            <span className="text-xs px-2 py-1 bg-primary/10 rounded">700 sq ft: $1,400-$5,600</span>
+            <span className="text-xs px-2 py-1 bg-primary/10 rounded">1000 sq ft: $2,000-$9,000</span>
+            <span className="text-xs px-2 py-1 bg-primary/10 rounded font-semibold">2000 sq ft: $4,000-$18,000</span>
+          </div>
+          
           <CardDescription>
-            Calculate how much carpet you need for multiple rooms. Get a whole-house carpet estimate with combined totals. Perfect for answering "how much carpet do I need for my house?" Also try our <a href="#calculator" className="text-primary hover:underline">single room carpet calculator</a> or <a href="#stair-carpet-calculator" className="text-primary hover:underline">stair carpet calculator</a>.
+            Calculate carpet for multiple rooms with combined totals. Get whole-house estimates for 
+            <a href="https://www.lowes.com/l/floors/carpet" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline ml-1">Lowe's</a> and 
+            <a href="https://www.homedepot.com/b/Flooring-Carpet/N-5yc1vZaq7m" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline ml-1">Home Depot</a>. 
+            Also try our <a href="#calculator" className="text-primary hover:underline">single room calculator</a> or <a href="#stair-carpet-calculator" className="text-primary hover:underline">stair calculator</a>.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-6">

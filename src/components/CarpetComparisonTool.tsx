@@ -108,13 +108,37 @@ export const CarpetComparisonTool = () => {
 
   return (
     <section id="comparison-tool" className="w-full max-w-6xl mx-auto space-y-6">
-<div className="text-center space-y-4">
-        <h2 className="text-3xl font-bold flex items-center justify-center gap-2">
-          <Store className="h-8 w-8 text-primary" />
-          Carpet Quote Comparison - Home Depot vs Lowe's Prices 2026
+<div className="text-center space-y-3">
+        <h2 className="text-2xl md:text-3xl font-bold flex items-center justify-center gap-2">
+          <Store className="h-7 w-7 text-primary" />
+          Carpet Installation Cost Calculator 2026
         </h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto">
-          Get carpet quotes and compare carpet installation prices from <a href="https://www.lowes.com/l/floors/carpet" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Lowe's</a>, <a href="https://www.homedepot.com/b/Flooring-Carpet/N-5yc1vZaq7m" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Home Depot</a>, <a href="https://www.costco.com/carpet-flooring.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Costco</a>, and local contractors. Find the best carpet estimate for your project.
+        <h3 className="text-lg text-muted-foreground">Lowe's vs Home Depot Installation Prices</h3>
+        
+        {/* Lowe's specific pricing for SEO */}
+        <div className="max-w-3xl mx-auto bg-primary/5 p-3 rounded-lg text-sm">
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <strong>Lowe's Installation Cost 2026:</strong>
+              <ul className="text-xs text-muted-foreground mt-1">
+                <li>Basic: $0.50-$0.75/sq ft</li>
+                <li>Standard: $0.75-$1.25/sq ft</li>
+                <li>Premium: $1.25-$2.00/sq ft</li>
+              </ul>
+            </div>
+            <div>
+              <strong>Home Depot Installation Cost 2026:</strong>
+              <ul className="text-xs text-muted-foreground mt-1">
+                <li>Basic: $0.60-$0.80/sq ft</li>
+                <li>Standard: $0.80-$1.30/sq ft</li>
+                <li>Promo: Starting at $0.49/sq ft</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <p className="text-muted-foreground max-w-2xl mx-auto text-sm">
+          Compare carpet quotes from <a href="https://www.lowes.com/l/floors/carpet" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Lowe's</a>, <a href="https://www.homedepot.com/b/Flooring-Carpet/N-5yc1vZaq7m" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Home Depot</a>, <a href="https://www.costco.com/carpet-flooring.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Costco</a>, and local contractors.
         </p>
       </div>
 

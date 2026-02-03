@@ -185,3 +185,49 @@
     @apply bg-primary/30 rounded-full hover:bg-primary/50;
   }
 }
+
+/* Mobile Optimization for Calculators */
+@media (max-width: 768px) {
+  /* Touch-friendly inputs - prevents iOS zoom */
+  input[type="number"],
+  input[type="text"],
+  select,
+  textarea {
+    font-size: 16px !important;
+    min-height: 44px;
+    padding: 12px;
+  }
+
+  /* Larger calculate buttons */
+  .calculator-card button[type="button"],
+  .calculator-card button[type="submit"] {
+    min-height: 48px;
+    font-size: 16px;
+  }
+
+  /* Better spacing for mobile */
+  .calculator-card {
+    padding: 1rem;
+  }
+
+  /* Stack grid items on mobile */
+  .calculator-result .grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Print styles for estimate PDFs */
+@media print {
+  .ad-banner-container,
+  header,
+  footer,
+  nav,
+  .result-actions,
+  button {
+    display: none !important;
+  }
+
+  .calculator-result {
+    break-inside: avoid;
+  }
+}

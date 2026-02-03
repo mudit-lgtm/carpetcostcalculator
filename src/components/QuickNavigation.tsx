@@ -1,14 +1,11 @@
-import { Calculator, ArrowUpDown, Home, Layers, Grid3X3, Wrench, BarChart3, Store } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { Calculator, ArrowUpDown, Grid3X3, Store, Building2 } from "lucide-react";
 
 const navItems = [
   { id: 'calculator', label: 'Carpet Calculator', icon: Calculator, highlight: true },
   { id: 'stair-carpet-calculator', label: 'Stair Calculator', icon: ArrowUpDown },
-  { id: 'multi-room', label: 'Multi-Room', icon: Home },
-  { id: 'comparison-tool', label: 'Price Comparison', icon: BarChart3 },
-  { id: 'tile-calculator', label: 'Tile Calculator', icon: Grid3X3 },
-  { id: 'floor-comparison', label: 'Floor Types', icon: Layers },
-  { id: 'retailers', label: 'Retailers', icon: Store },
+  { id: 'multi-room', label: 'Multi-Room', icon: Grid3X3 },
+  { id: 'comparison-tool', label: 'Price Comparison', icon: Store },
+  { id: 'retailers', label: 'Retailers', icon: Building2 },
 ];
 
 export const QuickNavigation = () => {
@@ -38,10 +35,19 @@ export const QuickNavigation = () => {
             );
           })}
         </div>
-        <div className="flex justify-center mt-3">
-          <Badge variant="secondary" className="text-xs">
-            Last Updated: February 2026 • Free Carpet Cost Estimator
-          </Badge>
+        
+        {/* Popular searches for SEO */}
+        <div className="flex flex-wrap justify-center gap-1 mt-3 text-xs text-muted-foreground">
+          <span>Popular:</span>
+          <a href="#calculator" className="text-primary hover:underline">10x12 Room</a>
+          <span>•</span>
+          <a href="#calculator" className="text-primary hover:underline">12x12 Room</a>
+          <span>•</span>
+          <a href="#calculator" className="text-primary hover:underline">20x20 Room</a>
+          <span>•</span>
+          <a href="#stair-carpet-calculator" className="text-primary hover:underline">13 Stairs</a>
+          <span>•</span>
+          <a href="#comparison-tool" className="text-primary hover:underline">Lowe's Prices</a>
         </div>
       </div>
     </nav>
