@@ -137,12 +137,22 @@ export const StairCalculatorSection = () => {
 <div className="text-center mb-8">
           <div className="flex items-center justify-center gap-2 mb-4">
             <ArrowUpDown className="h-8 w-8 text-primary" />
-            <h2 className="text-3xl font-bold">Stair Carpet Calculator - Calculate Carpet for Stairs</h2>
+            <h2 className="text-3xl font-bold">Stair Carpet Calculator</h2>
           </div>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            How much does it cost to carpet stairs? Calculate stair carpet installation cost for straight, curved, spiral, and L-shaped configurations. 
-            Get accurate estimates for <a href="https://www.lowes.com/l/floors/carpet" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Lowe's</a> and <a href="https://www.homedepot.com/b/Flooring-Carpet/N-5yc1vZaq7m" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Home Depot</a> stair carpeting. 
-            Need a room estimate? Try our <a href="#calculator" className="text-primary hover:underline">carpet cost calculator</a>.
+          <h3 className="text-xl text-muted-foreground mb-2">How Much to Carpet 13 Stairs? $260-$910</h3>
+          
+          {/* Quick stair cost reference */}
+          <div className="flex flex-wrap justify-center gap-2 mb-4">
+            <span className="text-xs px-2 py-1 bg-primary/10 rounded">12 stairs: $240-$840</span>
+            <span className="text-xs px-2 py-1 bg-primary/10 rounded font-semibold">13 stairs: $260-$910</span>
+            <span className="text-xs px-2 py-1 bg-primary/10 rounded">14 stairs: $280-$980</span>
+            <span className="text-xs px-2 py-1 bg-primary/10 rounded">15 stairs: $300-$1,050</span>
+          </div>
+          
+          <p className="text-muted-foreground max-w-2xl mx-auto text-sm">
+            Calculate stair carpet cost for straight, curved, spiral, and L-shaped stairs. 
+            Get estimates from <a href="https://www.lowes.com/l/floors/carpet" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Lowe's</a> and <a href="https://www.homedepot.com/b/Flooring-Carpet/N-5yc1vZaq7m" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Home Depot</a>. 
+            Need a room estimate? Use our <a href="#calculator" className="text-primary hover:underline">carpet calculator</a>.
           </p>
         </div>
 
