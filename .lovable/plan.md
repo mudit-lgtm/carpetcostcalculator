@@ -1,72 +1,57 @@
-# Carpet Calculator SEO & Revenue Optimization
 
-## ✅ IMPLEMENTATION COMPLETE
 
-### Summary of Changes
+## Adsterra Revenue Optimization Plan
 
-All phases from the approved plan have been implemented:
+### Issues Found
 
-#### Phase 1: Page Structure Reorganization ✅
-- Removed 7 low-traffic calculators from Index.tsx
-- Kept only 4 core high-traffic tools
-- Calculator is now first interactive element (above fold)
+1. **Wrong ad domain**: `AdBanner.tsx` uses `highperformanceformat.com` but all your codes use `maddenwiped.com` — ads may not be loading
+2. **Missing ad**: Native banner `19c6e2c98905a2ebcae007bf0401b711` (with container div) is not implemented anywhere
+3. **Duplicate body ads**: `index.html` has raw ad scripts in `<body>` that conflict with React-managed `AdBanner` components — causes double-loading and potential policy violations
+4. **Under-monetized placements**: Only 4 ad slots on the page; can add 2-3 more without hurting UX
 
-#### Phase 2: Adsterra Ad Placements ✅
-- 728x90 after main calculator (desktop)
-- 468x60 for mobile
-- 160x300 between tools
-- 728x90 before FAQ
+### Changes
 
-#### Phase 3: Navigation Updates ✅
-- Header: 4 core tools only
-- Footer: Streamlined with outbound links to Lowe's/Home Depot/Costco
-- QuickNavigation: 5 items with popular search links
+**1. Fix `src/components/AdBanner.tsx`**
+- Change domain from `highperformanceformat.com` to `maddenwiped.com`
+- This fixes all 4 existing banner sizes (728x90, 468x60, 160x600, 160x300)
 
-#### Phase 4: SEO-Optimized Content ✅
-- Hero: Updated H1, room size CTAs, "February 2026" badge
-- StairCalculator: H3 "How Much to Carpet 13 Stairs? $260-$910"
-- MultiRoom: H3 with 700/1000/2000 sq ft examples
-- CarpetComparisonTool: Lowe's vs Home Depot pricing tables
-- QuickCostReference: H3 headers matching exact search queries
+**2. Create `src/components/NativeBanner.tsx`**
+- New component for the native ad (`19c6e2c98905a2ebcae007bf0401b711`)
+- Renders the container div + async script injection
+- This ad type typically has higher CPM than static banners
 
-#### Phase 5: FAQ Streamlined ✅
-- Reduced to 10 high-traffic questions
-- Internal links to calculators
-- Outbound links to retailers
+**3. Clean up `index.html`**
+- Remove duplicate banner scripts from `<body>` (160x600 and 728x90 raw scripts) — these are already handled by `AdBanner` React components
+- Keep the two JS monetization scripts (`fb8887...` in head, `abea50...` in body) as these are likely popunder/social bar ads
+- Add the missing `abea50...` script if not present (it is present)
 
-#### Phase 6: Schema Updates ✅
-- Updated index.html with 4-tool CollectionPage
-- FAQPage with 10 keyword-optimized questions
-- HowTo reduced to 4 steps
+**4. Optimize ad placements in `src/pages/Index.tsx`**
+New layout with 7 strategic ad slots:
 
-#### Phase 7: Technical Optimizations ✅
-- Created sitemap.xml with hash URLs
-- Mobile CSS: 16px fonts, 44px min-height inputs
-- Print styles for PDF estimates
+```text
+Hero
+QuickNavigation
+CALCULATOR
+  → 728x90 (desktop) / 468x60 (mobile)     [existing]
+QuickCostReference
+  → Native Banner (19c6e...)                [NEW - high CPM]
+StairCalculator
+  → 160x300 rectangle                       [existing]
+MultiRoomCalculator
+  → 468x60                                  [existing]
+CarpetComparisonTool
+  → 728x90 (desktop) / 468x60 (mobile)     [NEW - before retailers]
+RetailerComparison
+  → 728x90 (desktop only)                   [existing - before FAQ]
+FAQ
+```
 
-### Files Changed
-1. `src/pages/Index.tsx`
-2. `src/components/Header.tsx`
-3. `src/components/Footer.tsx`
-4. `src/components/QuickNavigation.tsx`
-5. `src/components/Hero.tsx`
-6. `src/components/StairCalculatorSection.tsx`
-7. `src/components/MultiRoomCalculator.tsx`
-8. `src/components/CarpetComparisonTool.tsx`
-9. `src/components/QuickCostReference.tsx`
-10. `src/components/FAQ.tsx`
-11. `src/components/RetailerComparison.tsx`
-12. `src/index.css`
-13. `index.html`
-14. `public/sitemap.xml` (created)
+### Summary of Files
 
-### Expected Results
-- **Week 1-2**: Impressions +20-30%, CTR 0.5-1%
-- **Week 3-4**: CTR 2-3%, 200-400 clicks/month
-- **Month 2+**: 600-900 clicks/month, $120-$200/month Adsterra
+| File | Change |
+|------|--------|
+| `src/components/AdBanner.tsx` | Fix domain to `maddenwiped.com` |
+| `src/components/NativeBanner.tsx` | NEW — native ad component |
+| `src/pages/Index.tsx` | Add NativeBanner + extra ad slot |
+| `index.html` | Remove duplicate body ad scripts |
 
-### Next Steps
-1. Submit updated sitemap to Google Search Console
-2. Request re-indexing of main page
-3. Monitor Core Web Vitals for ad impact
-4. Update "Last Updated" monthly
