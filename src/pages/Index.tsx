@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { QuickNavigation } from "@/components/QuickNavigation";
-import { CarpetCalculator } from "@/components/CarpetCalculator";
+import { FlagshipCalculator } from "@/components/FlagshipCalculator";
 import { AdBanner } from "@/components/AdBanner";
 import { NativeBanner } from "@/components/NativeBanner";
 import { QuickCostReference } from "@/components/QuickCostReference";
@@ -19,20 +19,17 @@ const Index = () => {
       <Header />
       
       <main>
-        {/* Compact Hero */}
         <Hero />
-        
-        {/* Quick Navigation for 4 core tools */}
         <QuickNavigation />
         
-        {/* MAIN CALCULATOR - First interactive element, above the fold */}
+        {/* FLAGSHIP CALCULATOR — hero tool, above fold */}
         <section id="calculator" className="py-6 px-4">
           <div className="container mx-auto">
-            <CarpetCalculator />
+            <FlagshipCalculator />
           </div>
         </section>
 
-        {/* Ad Banner - 728x90 after main calculator (high visibility) */}
+        {/* Ad Banner after main calculator */}
         <div className="py-4 hidden md:block">
           <AdBanner size="728x90" />
         </div>
@@ -40,24 +37,30 @@ const Index = () => {
           <AdBanner size="468x60" />
         </div>
 
-        {/* Quick Cost Reference - Room Size Pricing */}
+        {/* Quick Cost Reference — SEO content tables */}
         <section className="py-6 px-4 bg-secondary/20">
           <div className="container mx-auto">
             <QuickCostReference />
           </div>
         </section>
 
-        {/* Native Banner - High CPM ad after cost reference */}
+        {/* Native Banner — high CPM */}
         <div className="py-4">
           <NativeBanner />
         </div>
 
-        {/* Stair Carpet Calculator - Position 2.1 for "13 stairs" keyword */}
-        <StairCalculatorSection />
-
-        {/* Ad Banner - 160x300 rectangle between tools */}
+        {/* Ad Banner */}
         <div className="py-4 flex justify-center">
           <AdBanner size="160x300" />
+        </div>
+
+        {/* ── Secondary Tools (demoted, still on page for long-tail SEO) ── */}
+
+        {/* Stair Calculator */}
+        <StairCalculatorSection />
+
+        <div className="py-4">
+          <AdBanner size="468x60" />
         </div>
 
         {/* Multi-Room Calculator */}
@@ -67,25 +70,19 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Ad Banner - 468x60 */}
-        <div className="py-4">
-          <AdBanner size="468x60" />
-        </div>
-
-        {/* Carpet Comparison Tool - Lowe's vs Home Depot */}
-        <section id="comparison-tool" className="py-6 px-4">
-          <div className="container mx-auto">
-            <CarpetComparisonTool />
-          </div>
-        </section>
-
-        {/* Ad Banner - 728x90 (desktop) / 468x60 (mobile) before retailers */}
         <div className="py-4 hidden md:block">
           <AdBanner size="728x90" />
         </div>
         <div className="py-4 md:hidden">
           <AdBanner size="468x60" />
         </div>
+
+        {/* Carpet Comparison Tool */}
+        <section id="comparison-tool" className="py-6 px-4">
+          <div className="container mx-auto">
+            <CarpetComparisonTool />
+          </div>
+        </section>
 
         {/* Retailer Comparison */}
         <section id="retailers" className="py-6 px-4 bg-secondary/20">
@@ -94,12 +91,11 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Ad Banner - 728x90 before FAQ */}
+        {/* Ad Banner before FAQ */}
         <div className="py-4 hidden md:block">
           <AdBanner size="728x90" />
         </div>
 
-        {/* FAQ - Streamlined 10 high-traffic questions */}
         <FAQ />
       </main>
 
