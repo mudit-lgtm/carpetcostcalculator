@@ -1,7 +1,7 @@
 import { Calculator, ArrowUpDown, Grid3X3, Store, Building2 } from "lucide-react";
 
 const navItems = [
-  { id: 'calculator', label: 'Carpet Calculator', icon: Calculator, highlight: true },
+  { id: 'calculator', label: 'Cost Calculator', icon: Calculator, highlight: true },
   { id: 'stair-carpet-calculator', label: 'Stair Calculator', icon: ArrowUpDown },
   { id: 'multi-room', label: 'Multi-Room', icon: Grid3X3 },
   { id: 'comparison-tool', label: 'Price Comparison', icon: Store },
@@ -36,14 +36,13 @@ export const QuickNavigation = () => {
           })}
         </div>
         
-        {/* Popular searches for SEO */}
         <div className="flex flex-wrap justify-center gap-1 mt-3 text-xs text-muted-foreground">
           <span>Popular:</span>
-          <a href="#calculator" className="text-primary hover:underline">10x12 Room</a>
+          <a href="#calculator" className="text-primary hover:underline">10×12 Room</a>
           <span>•</span>
-          <a href="#calculator" className="text-primary hover:underline">12x12 Room</a>
+          <a href="#calculator" className="text-primary hover:underline">12×12 Room</a>
           <span>•</span>
-          <a href="#calculator" className="text-primary hover:underline">20x20 Room</a>
+          <a href="#calculator" className="text-primary hover:underline">20×20 Room</a>
           <span>•</span>
           <a href="#stair-carpet-calculator" className="text-primary hover:underline">13 Stairs</a>
           <span>•</span>
