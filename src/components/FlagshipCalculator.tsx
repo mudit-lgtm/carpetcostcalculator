@@ -226,16 +226,16 @@ export const FlagshipCalculator = () => {
       {/* Quality Tier */}
       <div className="space-y-2">
         <Label className="text-sm font-semibold">Carpet Quality</Label>
-        <RadioGroup value={quality} onValueChange={(v) => setQuality(v as typeof quality)} className="grid grid-cols-3 gap-2">
+        <RadioGroup value={quality} onValueChange={(v) => setQuality(v as typeof quality)} className="grid grid-cols-3 gap-1.5 sm:gap-2">
           {Object.entries(qualityTiers).map(([key, tier]) => (
             <Label
               key={key}
               htmlFor={`q-${key}`}
-              className={`flex flex-col items-center gap-1 rounded-lg border-2 p-3 cursor-pointer transition-all text-center ${quality === key ? 'border-primary bg-primary/5' : 'border-border hover:border-primary/50'}`}
+              className={`flex flex-col items-center gap-0.5 rounded-lg border-2 p-2 sm:p-3 cursor-pointer transition-all text-center min-h-[44px] ${quality === key ? 'border-primary bg-primary/5' : 'border-border hover:border-primary/50'}`}
             >
               <RadioGroupItem value={key} id={`q-${key}`} className="sr-only" />
-              <span className="font-semibold text-sm">{tier.label}</span>
-              <span className="text-xs text-muted-foreground">{tier.range}</span>
+              <span className="font-semibold text-xs sm:text-sm">{tier.label}</span>
+              <span className="text-[10px] sm:text-xs text-muted-foreground">{tier.range}</span>
             </Label>
           ))}
         </RadioGroup>
