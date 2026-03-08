@@ -47,6 +47,11 @@ const Index = () => {
           </div>
         </section>
 
+        {/* Native Banner - High CPM ad after cost reference */}
+        <div className="py-4">
+          <NativeBanner />
+        </div>
+
         {/* Stair Carpet Calculator - Position 2.1 for "13 stairs" keyword */}
         <StairCalculatorSection />
 
@@ -73,6 +78,14 @@ const Index = () => {
             <CarpetComparisonTool />
           </div>
         </section>
+
+        {/* Ad Banner - 728x90 (desktop) / 468x60 (mobile) before retailers */}
+        <div className="py-4 hidden md:block">
+          <AdBanner size="728x90" />
+        </div>
+        <div className="py-4 md:hidden">
+          <AdBanner size="468x60" />
+        </div>
 
         {/* Retailer Comparison */}
         <section id="retailers" className="py-6 px-4 bg-secondary/20">
