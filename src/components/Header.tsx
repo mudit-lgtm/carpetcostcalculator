@@ -1,4 +1,4 @@
-import { Hammer, Home, Calculator, Building2, HelpCircle, Menu, X, ArrowUpDown, Grid3X3 } from "lucide-react";
+import { Hammer, Home, Calculator, Building2, HelpCircle, Menu, X, ArrowUpDown, Store } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -8,30 +8,26 @@ export const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <div className="flex items-center gap-2">
+        <a href="/" className="flex items-center gap-2">
           <Hammer className="h-6 w-6 text-primary" />
           <div className="text-xl font-bold text-primary">
-            Carpet Calculator
+            Carpet Cost Calculator
           </div>
-        </div>
+        </a>
 
-        {/* Desktop Navigation - 4 Core Tools Only */}
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-4">
-          <a href="/" className="text-muted-foreground hover:text-primary transition-smooth flex items-center gap-1 text-sm">
-            <Home className="h-4 w-4 text-primary/70" />
-            Home
-          </a>
           <a href="#calculator" className="text-muted-foreground hover:text-primary transition-smooth flex items-center gap-1 text-sm">
             <Calculator className="h-4 w-4 text-primary/80" />
-            Calculator
+            Cost Calculator
           </a>
           <a href="#stair-carpet-calculator" className="text-muted-foreground hover:text-primary transition-smooth flex items-center gap-1 text-sm">
             <ArrowUpDown className="h-4 w-4 text-primary/70" />
             Stairs
           </a>
-          <a href="#multi-room" className="text-muted-foreground hover:text-primary transition-smooth flex items-center gap-1 text-sm">
-            <Grid3X3 className="h-4 w-4 text-primary/60" />
-            Multi-Room
+          <a href="#comparison-tool" className="text-muted-foreground hover:text-primary transition-smooth flex items-center gap-1 text-sm">
+            <Store className="h-4 w-4 text-primary/70" />
+            Compare Prices
           </a>
           <a href="#retailers" className="text-muted-foreground hover:text-primary transition-smooth flex items-center gap-1 text-sm">
             <Building2 className="h-4 w-4 text-primary/80" />
@@ -57,21 +53,17 @@ export const Header = () => {
         {isMenuOpen && (
           <div className="absolute top-16 left-0 right-0 bg-background border-b md:hidden">
             <nav className="flex flex-col p-4 space-y-2">
-              <a href="/" className="text-muted-foreground hover:text-primary transition-smooth py-2 flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
-                <Home className="h-4 w-4 text-primary/70" />
-                Home
-              </a>
               <a href="#calculator" className="text-muted-foreground hover:text-primary transition-smooth py-2 flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
                 <Calculator className="h-4 w-4 text-primary/80" />
-                Carpet Calculator
+                Cost Calculator
               </a>
               <a href="#stair-carpet-calculator" className="text-muted-foreground hover:text-primary transition-smooth py-2 flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
                 <ArrowUpDown className="h-4 w-4 text-primary/70" />
                 Stair Calculator
               </a>
-              <a href="#multi-room" className="text-muted-foreground hover:text-primary transition-smooth py-2 flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
-                <Grid3X3 className="h-4 w-4 text-primary/60" />
-                Multi-Room Calculator
+              <a href="#comparison-tool" className="text-muted-foreground hover:text-primary transition-smooth py-2 flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
+                <Store className="h-4 w-4 text-primary/70" />
+                Compare Prices
               </a>
               <a href="#retailers" className="text-muted-foreground hover:text-primary transition-smooth py-2 flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
                 <Building2 className="h-4 w-4 text-primary/80" />
