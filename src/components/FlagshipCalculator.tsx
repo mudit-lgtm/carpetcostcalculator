@@ -495,10 +495,10 @@ export const FlagshipCalculator = () => {
 
         <CardContent className="space-y-5">
           <Tabs value={activeTab} onValueChange={setActiveTab}>
-            <TabsList className="w-full grid grid-cols-3">
-              <TabsTrigger value="single">Single Room</TabsTrigger>
-              <TabsTrigger value="multi">Multiple Rooms</TabsTrigger>
-              <TabsTrigger value="combo">Rooms + Stairs</TabsTrigger>
+            <TabsList className="w-full grid grid-cols-3 h-auto">
+              <TabsTrigger value="single" className="text-xs sm:text-sm py-2">Single Room</TabsTrigger>
+              <TabsTrigger value="multi" className="text-xs sm:text-sm py-2">Multi-Room</TabsTrigger>
+              <TabsTrigger value="combo" className="text-xs sm:text-sm py-2">Rooms + Stairs</TabsTrigger>
             </TabsList>
 
             {/* ── Tab 1: Single Room ─────────────────── */}
