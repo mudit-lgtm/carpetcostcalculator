@@ -542,20 +542,20 @@ export const FlagshipCalculator = () => {
             {/* ── Tab 2: Multiple Rooms ──────────────── */}
             <TabsContent value="multi" className="space-y-4 mt-4">
               {rooms.map((room, i) => (
-                <div key={i} className="flex items-end gap-2">
-                  <div className="flex-1 space-y-1">
-                    <Label className="text-xs text-muted-foreground">Room Name</Label>
+                <div key={i} className="grid grid-cols-[1fr_auto_auto_auto] items-end gap-2">
+                  <div className="space-y-1 min-w-0">
+                    <Label className="text-xs text-muted-foreground">Room</Label>
                     <Input value={room.name} onChange={e => updateRoom(i, 'name', e.target.value)} className="text-sm" />
                   </div>
-                  <div className="w-20 space-y-1">
-                    <Label className="text-xs text-muted-foreground">Length</Label>
+                  <div className="w-16 sm:w-20 space-y-1">
+                    <Label className="text-xs text-muted-foreground">L (ft)</Label>
                     <Input type="number" value={room.length} onChange={e => updateRoom(i, 'length', e.target.value)} />
                   </div>
-                  <div className="w-20 space-y-1">
-                    <Label className="text-xs text-muted-foreground">Width</Label>
+                  <div className="w-16 sm:w-20 space-y-1">
+                    <Label className="text-xs text-muted-foreground">W (ft)</Label>
                     <Input type="number" value={room.width} onChange={e => updateRoom(i, 'width', e.target.value)} />
                   </div>
-                  <Button variant="ghost" size="icon" onClick={() => removeRoom(i)} disabled={rooms.length <= 1}>
+                  <Button variant="ghost" size="icon" onClick={() => removeRoom(i)} disabled={rooms.length <= 1} className="h-10 w-10">
                     <Trash2 className="h-4 w-4 text-destructive" />
                   </Button>
                 </div>
