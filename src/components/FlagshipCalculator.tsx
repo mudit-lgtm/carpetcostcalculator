@@ -244,20 +244,20 @@ export const FlagshipCalculator = () => {
       {/* Installation Mode */}
       <div className="space-y-2">
         <Label className="text-sm font-semibold">Installation</Label>
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-2 gap-1.5 sm:gap-2">
           <Button
             type="button"
             variant={installMode === 'professional' ? 'default' : 'outline'}
             onClick={() => setInstallMode('professional')}
-            className="text-sm"
+            className="text-xs sm:text-sm min-h-[44px]"
           >
-            Professional (default)
+            Professional
           </Button>
           <Button
             type="button"
             variant={installMode === 'diy' ? 'default' : 'outline'}
             onClick={() => setInstallMode('diy')}
-            className="text-sm"
+            className="text-xs sm:text-sm min-h-[44px]"
           >
             DIY (materials only)
           </Button>
