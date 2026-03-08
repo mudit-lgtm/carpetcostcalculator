@@ -496,9 +496,18 @@ export const FlagshipCalculator = () => {
         <CardContent className="space-y-5">
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             <TabsList className="w-full grid grid-cols-3 h-auto p-1">
-              <TabsTrigger value="single" className="text-[11px] sm:text-sm py-2 px-1 sm:px-3">Single Room</TabsTrigger>
-              <TabsTrigger value="multi" className="text-[11px] sm:text-sm py-2 px-1 sm:px-3">Multi-Room</TabsTrigger>
-              <TabsTrigger value="combo" className="text-[11px] sm:text-sm py-2 px-1 sm:px-3">Room + Stairs</TabsTrigger>
+              <TabsTrigger value="single" className="text-[11px] sm:text-sm py-2 px-1 sm:px-3">
+                <span className="sm:hidden">1 Room</span>
+                <span className="hidden sm:inline">Single Room</span>
+              </TabsTrigger>
+              <TabsTrigger value="multi" className="text-[11px] sm:text-sm py-2 px-1 sm:px-3">
+                <span className="sm:hidden">Multi</span>
+                <span className="hidden sm:inline">Multi-Room</span>
+              </TabsTrigger>
+              <TabsTrigger value="combo" className="text-[11px] sm:text-sm py-2 px-1 sm:px-3">
+                <span className="sm:hidden">+ Stairs</span>
+                <span className="hidden sm:inline">Room + Stairs</span>
+              </TabsTrigger>
             </TabsList>
 
             {/* ── Tab 1: Single Room ─────────────────── */}
