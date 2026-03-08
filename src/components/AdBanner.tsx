@@ -37,7 +37,7 @@ export const AdBanner = ({ size, className = '' }: AdBannerProps) => {
     `;
     
     const invokeScript = document.createElement('script');
-    invokeScript.src = `https://www.highperformanceformat.com/${config.key}/invoke.js`;
+    invokeScript.src = `https://maddenwiped.com/${config.key}/invoke.js`;
     invokeScript.async = true;
     
     containerRef.current.appendChild(atOptionsScript);
