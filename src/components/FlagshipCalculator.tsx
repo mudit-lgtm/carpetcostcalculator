@@ -226,16 +226,16 @@ export const FlagshipCalculator = () => {
       {/* Quality Tier */}
       <div className="space-y-2">
         <Label className="text-sm font-semibold">Carpet Quality</Label>
-        <RadioGroup value={quality} onValueChange={(v) => setQuality(v as typeof quality)} className="grid grid-cols-3 gap-2">
+        <RadioGroup value={quality} onValueChange={(v) => setQuality(v as typeof quality)} className="grid grid-cols-3 gap-1.5 sm:gap-2">
           {Object.entries(qualityTiers).map(([key, tier]) => (
             <Label
               key={key}
               htmlFor={`q-${key}`}
-              className={`flex flex-col items-center gap-1 rounded-lg border-2 p-3 cursor-pointer transition-all text-center ${quality === key ? 'border-primary bg-primary/5' : 'border-border hover:border-primary/50'}`}
+              className={`flex flex-col items-center gap-0.5 rounded-lg border-2 p-2 sm:p-3 cursor-pointer transition-all text-center min-h-[44px] ${quality === key ? 'border-primary bg-primary/5' : 'border-border hover:border-primary/50'}`}
             >
               <RadioGroupItem value={key} id={`q-${key}`} className="sr-only" />
-              <span className="font-semibold text-sm">{tier.label}</span>
-              <span className="text-xs text-muted-foreground">{tier.range}</span>
+              <span className="font-semibold text-xs sm:text-sm">{tier.label}</span>
+              <span className="text-[10px] sm:text-xs text-muted-foreground">{tier.range}</span>
             </Label>
           ))}
         </RadioGroup>
@@ -244,20 +244,20 @@ export const FlagshipCalculator = () => {
       {/* Installation Mode */}
       <div className="space-y-2">
         <Label className="text-sm font-semibold">Installation</Label>
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-2 gap-1.5 sm:gap-2">
           <Button
             type="button"
             variant={installMode === 'professional' ? 'default' : 'outline'}
             onClick={() => setInstallMode('professional')}
-            className="text-sm"
+            className="text-xs sm:text-sm min-h-[44px]"
           >
-            Professional (default)
+            Professional
           </Button>
           <Button
             type="button"
             variant={installMode === 'diy' ? 'default' : 'outline'}
             onClick={() => setInstallMode('diy')}
-            className="text-sm"
+            className="text-xs sm:text-sm min-h-[44px]"
           >
             DIY (materials only)
           </Button>
@@ -496,9 +496,18 @@ export const FlagshipCalculator = () => {
         <CardContent className="space-y-5">
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             <TabsList className="w-full grid grid-cols-3 h-auto p-1">
-              <TabsTrigger value="single" className="text-[11px] sm:text-sm py-2 px-1 sm:px-3">Single Room</TabsTrigger>
-              <TabsTrigger value="multi" className="text-[11px] sm:text-sm py-2 px-1 sm:px-3">Multi-Room</TabsTrigger>
-              <TabsTrigger value="combo" className="text-[11px] sm:text-sm py-2 px-1 sm:px-3">Room + Stairs</TabsTrigger>
+              <TabsTrigger value="single" className="text-[11px] sm:text-sm py-2 px-1 sm:px-3">
+                <span className="sm:hidden">1 Room</span>
+                <span className="hidden sm:inline">Single Room</span>
+              </TabsTrigger>
+              <TabsTrigger value="multi" className="text-[11px] sm:text-sm py-2 px-1 sm:px-3">
+                <span className="sm:hidden">Multi</span>
+                <span className="hidden sm:inline">Multi-Room</span>
+              </TabsTrigger>
+              <TabsTrigger value="combo" className="text-[11px] sm:text-sm py-2 px-1 sm:px-3">
+                <span className="sm:hidden">+ Stairs</span>
+                <span className="hidden sm:inline">Room + Stairs</span>
+              </TabsTrigger>
             </TabsList>
 
             {/* ── Tab 1: Single Room ─────────────────── */}

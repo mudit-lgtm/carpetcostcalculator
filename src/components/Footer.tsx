@@ -14,7 +14,7 @@ export const Footer = () => {
               </h3>
             </div>
             <p className="text-sm text-muted-foreground">
-              Free carpet installation cost calculator providing accurate estimates for materials, labor, and installation since 2018. Updated February 2026.
+              Free carpet installation cost calculator providing accurate estimates for materials, labor, and installation since 2018. Updated March 2026.
             </p>
           </div>
 
@@ -75,7 +75,7 @@ export const Footer = () => {
         </div>
 
         <div className="border-t pt-6 text-center text-sm text-muted-foreground">
-          <p>&copy; 2026 Carpet Calculator. Free tool for estimating carpet installation costs. Last Updated: February 2026</p>
+          <p>&copy; 2026 Carpet Cost Calculator. Free tool for estimating carpet installation costs. Last Updated: March 2026</p>
         </div>
       </div>
     </footer>
