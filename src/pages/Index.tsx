@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { QuickNavigation } from "@/components/QuickNavigation";
 import { CarpetCalculator } from "@/components/CarpetCalculator";
 import { AdBanner } from "@/components/AdBanner";
+import { NativeBanner } from "@/components/NativeBanner";
 import { QuickCostReference } from "@/components/QuickCostReference";
 import { StairCalculatorSection } from "@/components/StairCalculatorSection";
 import { MultiRoomCalculator } from "@/components/MultiRoomCalculator";
