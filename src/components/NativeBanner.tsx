@@ -30,7 +30,11 @@ export const NativeBanner = ({ className = '' }: NativeBannerProps) => {
   }, []);
 
   return (
-    <div ref={containerRef} className={`flex justify-center items-center ${className}`}>
+    <div
+      ref={containerRef}
+      className={`adsterra-slot adsterra-native flex justify-center items-center ${className}`}
+      data-ad-network="adsterra"
+    >
       <div id="container-19c6e2c98905a2ebcae007bf0401b711"></div>
     </div>
   );
