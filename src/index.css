@@ -231,3 +231,55 @@
     break-inside: avoid;
   }
 }
+
+/* ============================================================
+   Ad placement guards — prevent Google AdSense (Auto Ads)
+   iframes/overlays from covering Adsterra ad units.
+   Adsterra containers are tagged with .adsterra-slot
+   ============================================================ */
+
+/* Reserve space + isolate Adsterra slots so Auto Ads cannot
+   stack on top of them */
+.adsterra-slot {
+  position: relative;
+  z-index: 10;
+  isolation: isolate;
+  clear: both;
+}
+
+/* Keep a protective vertical gap around each Adsterra unit so
+   AdSense anchor/vignette/in-page ads don't visually collide */
+.adsterra-slot,
+[data-ad-network="adsterra"] {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+/* Block AdSense iframes from being injected INSIDE an Adsterra
+   container (Auto Ads sometimes targets generic divs) */
+.adsterra-slot ins.adsbygoogle,
+.adsterra-slot iframe[src*="googlesyndication"],
+.adsterra-slot iframe[src*="doubleclick"],
+.adsterra-slot iframe[id^="google_ads"],
+[data-ad-network="adsterra"] ins.adsbygoogle,
+[data-ad-network="adsterra"] iframe[src*="googlesyndication"],
+[data-ad-network="adsterra"] iframe[src*="doubleclick"] {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+/* If an AdSense overlay/anchor sits directly adjacent or on top
+   of an Adsterra slot, push it out of the way */
+.adsterra-slot + ins.adsbygoogle,
+.adsterra-slot ~ ins.adsbygoogle[data-anchor-status] {
+  margin-top: 32px !important;
+}
+
+/* Mobile — ensure Adsterra stays above any AdSense sticky/anchor */
+@media (max-width: 768px) {
+  .adsterra-slot {
+    z-index: 20;
+  }
+}
