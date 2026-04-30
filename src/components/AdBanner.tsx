@@ -52,7 +52,8 @@ export const AdBanner = ({ size, className = '' }: AdBannerProps) => {
 
   return (
     <div 
-      className={`flex justify-center items-center overflow-hidden ${className}`}
+      className={`adsterra-slot flex justify-center items-center overflow-hidden ${className}`}
+      data-ad-network="adsterra"
       style={{ minHeight: config.height, minWidth: config.width }}
     >
       <div 
